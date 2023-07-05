@@ -4,8 +4,6 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import {Button} from "@chakra-ui/react";
-
 export default function Home({ allProducts }: { allProducts: any }) {
     return (
         <>
@@ -14,7 +12,7 @@ export default function Home({ allProducts }: { allProducts: any }) {
             </Head>
             <div className="container">
                 <h2 className={styles.title}>
-                    All Products <span>🌿</span>
+                    All Products
                 </h2>
                 <div className={styles.products_container}>
                     {allProducts.map((product: any) => {
@@ -32,16 +30,7 @@ export default function Home({ allProducts }: { allProducts: any }) {
                                 </Link>
                                 <div className={styles.product_content}>
                                     <h3>{product.name}</h3>
-                                    <p>${product.price}</p>
-                                    <button
-                                        data-item-id={product.id}
-                                        data-item-price={product.price}
-                                        data-item-url={`products/${product.slug}`}
-                                        data-item-image={product.image?.url}
-                                        data-item-name={product.name}
-                                    >
-                                        Add to cart 🛒
-                                    </button>
+                                    {/*<p>${product?.price}</p>*/}
                                 </div>
                             </div>
                         );
