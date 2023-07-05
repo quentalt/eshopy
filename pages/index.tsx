@@ -26,7 +26,11 @@ export default function Home({ allProducts }: { allProducts: any }) {
                                             alt=""
                                        />
                                     </div>
-
+                                      <div className="mt-3">
+                                       <Button>
+                                           Add to cart 🛒
+                                       </Button>
+                                   </div>
                                 </Link>
                                 <div className={styles.product_content}>
                                     <h3>{product.name}</h3>
