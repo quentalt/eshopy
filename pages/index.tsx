@@ -21,7 +21,7 @@ export default function Home({ allProducts }: { allProducts: any }) {
                                 <Link href={`products/${product.slug}`}>
                                     <div className="bg-gray-100">
                                         <img
-                                            src={product.image?.url}
+                                            src={product.image.url}
                                             className={styles.product_img}
                                             alt=""
                                        />
@@ -30,7 +30,7 @@ export default function Home({ allProducts }: { allProducts: any }) {
                                 </Link>
                                 <div className={styles.product_content}>
                                     <h3>{product.name}</h3>
-                                    {/*<p>${product?.price}</p>*/}
+                                    <p>${product?.price}</p>
                                 </div>
                             </div>
                         );
